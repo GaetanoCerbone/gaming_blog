@@ -35,7 +35,7 @@ class ConsoleController extends Controller
             'description' =>$request->description,
             'logo' =>$request->file('logo')->store('public/logos')
         ]);
-        return redirect(route('console.inde'))->with('consoleCreated','Hai inserito la tua console');
+            return redirect(route('console.index'))->with('consoleCreated','Hai inserito la tua console');
     }
 
     /**
@@ -43,6 +43,9 @@ class ConsoleController extends Controller
      */
     public function show(Console $console)
     {
+        // rotta parametrica
+
+        return view('console.show', compact('console'));
 
     }
 

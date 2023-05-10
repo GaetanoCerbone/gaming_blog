@@ -36,7 +36,7 @@
                       <textarea name="description" id="description" cols="30" rows="10" class="form-control">{{old('description')}}</textarea>
                   </div>
                   <div class="d-flex justify-content-end">
-                      <button type="submit" class="btn btn-primary bg-dark">Submit</button>
+                      <button type="submit" class="btn btn-primary bg-dark">Carica</button>
                   </div>
                 </form>
               
