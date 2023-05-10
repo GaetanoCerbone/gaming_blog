@@ -1,5 +1,4 @@
 <x-layout>
-    <x-navbar />
     <x-header>
         <h1>
             Accedi
@@ -11,7 +10,7 @@
                 <form class="p-3  m-5 shadow" method="POST" action="{{route('login')}}">
                     @csrf
                     <div class="mb-3">
-                      <label for="email" class="form-label">Email address</label>
+                      <label for="email" class="form-label">Email</label>
                       <input type="email" name="email" class="form-control" id="email">
                     </div>
                     <div class="mb-3">
@@ -20,9 +19,9 @@
                     </div>
                     <div class="mb-3 form-check">
                       <input type="checkbox" name="remember" class="form-check-input" id="remember">
-                      <label class="form-check-label" for="remember">Check me out</label>
+                      <label class="form-check-label" for="remember">Conferma</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Log-in</button>
+                    <button type="submit" class="btn btn-primary">Ricordami</button>
                   </form>
             </div>
         </div>
