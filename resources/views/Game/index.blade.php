@@ -1,5 +1,5 @@
 <x-layout>
-    <x-navbar />
+
     <x-header> 
         <h1>
             LISTA GIOCHI
