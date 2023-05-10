@@ -17,10 +17,6 @@
                         <label for="name" class="form-label">Nome</label>
                         <input type="text" name="name" class="form-control" id="name">
                       </div>
-                      <div class="mb-3">
-                        <label for="surname" class="form-label">Cognome</label>
-                        <input type="text" name="surname" class="form-control" id="surname">
-                      </div>
                     <div class="mb-3">
                       <label for="password" class="form-label">Password</label>
                       <input type="password" name="password" class="form-control" id="password">

@@ -32,7 +32,7 @@
                       <input type="file" class="form-control" name="cover" id="cover" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
-                        <label for="description" class="form-label">Produttore</label>
+                        <label for="description" class="form-label">Sinossi</label>
                         <textarea name="description" id="description" cols="30" rows="10" class="form-control">{{old('description')}}</textarea>
                     </div>
                     <div class="d-flex justify-content-end">

@@ -7,10 +7,16 @@
       <div class="collapse navbar-collapse m-auto" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('game.create')}}">Carica</a>
+            <a class="nav-link active" aria-current="page" href="{{route('game.create')}}">Carica un gioco</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('game.index')}}">Lista</a>
+            <a class="nav-link active" aria-current="page" href="{{route('game.index')}}">Lista giochi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{route('console.create')}}">Inserisci una console</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{route('console.index')}}">Lista console</a>
           </li>
           @auth
           <li class="nav-item dropdown">
