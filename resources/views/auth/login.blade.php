@@ -19,9 +19,9 @@
                     </div>
                     <div class="mb-3 form-check">
                       <input type="checkbox" name="remember" class="form-check-input" id="remember">
-                      <label class="form-check-label" for="remember">Conferma</label>
+                      <label class="form-check-label" for="remember">Mantieni accesso</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Ricordami</button>
+                    <button type="submit" class="btn btn-primary">Log in</button>
                   </form>
             </div>
         </div>
