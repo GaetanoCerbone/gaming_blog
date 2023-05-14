@@ -8,7 +8,7 @@
   <div class="container">
       <div class="row justify-content-center">
           <div class="col-12 col-md-8">
-              <form action="{{route('console.store')}}" method="POST" class="p-5 shadow mt-4" enctype="multipart/form-data">
+              <form action="{{route('console.update',compact('console')) }}" method="POST" class="p-5 shadow mt-4" enctype="multipart/form-data">
                 @if ($errors->any())
                 <div class="alert alert-danger m-0">
                   <ul>
@@ -19,6 +19,7 @@
                 </div>
                 @endif  
                   @csrf
+                  @method('put')
                   <div class="mb-3">
                     <label for="name" class="form-label">Nome</label>
                     <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp" value="{{$console->name}}">

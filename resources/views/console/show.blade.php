@@ -13,7 +13,7 @@
                     <h5 class="card-title">{{$console->name}}</h5>
                     <p class="card-text">{{$console->producer}}</p>
                     <p class="card-text">{{$console->description}}</p>
-                    <a href="{{route('console.show', compact('console'))}}" class="btn btn-primary">Vai alla console</a>
+                    <a href="{{route('console.index')}}" class="btn btn-primary">Indietro</a>
                     </div>
                 </div>
             </div>

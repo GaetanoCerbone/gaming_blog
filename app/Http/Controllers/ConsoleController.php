@@ -65,7 +65,20 @@ class ConsoleController extends Controller
      */
     public function update(Request $request, Console $console)
     {
-        //
+        // le vado a dire di aggiornarmi sul database i valori che ho dato nel protected mass assignment
+        $console->update([
+            'name'=> $request->name,
+            'producer'=> $request->producer,
+            'description'=> $request->description,
+        ]);
+        if($request->logo){
+            $console->update([
+                'logo'=>$request->file('logo')->store('public/logos')
+            ]);
+        }
+        
+
+        return redirect(route('console.index'))->with('consoleUpdated, Hai aggiornato la tua console con successo');
     }
 
     /**
@@ -73,6 +86,7 @@ class ConsoleController extends Controller
      */
     public function destroy(Console $console)
     {
-        //
+        $console->delete();
+        return redirect(route('console.index'))->with('consoleDeleted, Hai cancellato la tua console con successo');
     }
 }

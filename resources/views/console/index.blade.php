@@ -6,7 +6,18 @@
     </x-header>
     @if(session('consoleCreated'))
     <div class="alert alert-success">
-        {{session('consoleCreated')}}
+        {{ session('consoleCreated') }}
+    </div>
+    @endif
+
+    @if(session('consoleUpdated'))
+    <div class="aler alert-success">
+        {{session('consoleUpdated')}}
+    </div>
+    @endif
+    @if(session('consoleDeleted'))
+    <div class="aler alert-success">
+        {{ session('consoleDeleted') }}
     </div>
     @endif
     <div class="container">
@@ -20,8 +31,15 @@
                         <div class="card-body">
                         <h5 class="card-title">{{$console->name}}</h5>
                         <p class="card-text">{{$console->producer}}</p>
-                        <a href="{{route('console.show', compact('console'))}}" class="btn btn-primary">Vai alla console</a>
-                        <a href="{{route('console.edit', compact('console'))}}" class="btn btn-success">Modifica console</a>
+                        <div class="d-flex flex-column justify-content-between">
+                            <a href="{{route('console.show', compact('console'))}}" class="btn btn-primary">Vai alla console</a>
+                            <a href="{{route('console.edit', compact('console'))}}" class="btn btn-success">Modifica console</a>
+                            <form action="{{route('console.destroy' ,compact('console'))}}" method="POST">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn btn-primary">Cancella</button>
+                            </form>
+                        </div>
                         </div>
                     </div>
                 </div>
