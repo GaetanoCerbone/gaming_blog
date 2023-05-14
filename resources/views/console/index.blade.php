@@ -21,6 +21,7 @@
                         <h5 class="card-title">{{$console->name}}</h5>
                         <p class="card-text">{{$console->producer}}</p>
                         <a href="{{route('console.show', compact('console'))}}" class="btn btn-primary">Vai alla console</a>
+                        <a href="{{route('console.edit', compact('console'))}}" class="btn btn-success">Modifica console</a>
                         </div>
                     </div>
                 </div>

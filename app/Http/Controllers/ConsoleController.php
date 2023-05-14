@@ -57,7 +57,7 @@ class ConsoleController extends Controller
      */
     public function edit(Console $console)
     {
-        //
+       return view('console.edit', compact('console'));
     }
 
     /**
