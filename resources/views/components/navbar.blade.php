@@ -8,9 +8,6 @@
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           @auth
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('user.profile')}}">Profilo</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('game.create')}}">Carica un gioco</a>
           </li>
           @endauth
@@ -31,14 +28,16 @@
               Ciao {{Auth::user()->name}}
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
-              <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{route('user.profile')}}">Profilo</a>
+              </li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#" onclick="event.preventDefault();document.querySelector('#form-logout').submit();">Esci</a></li>
               <form action="{{route('logout')}}" method="POST" id="form-logout" class="d-none">@csrf</form>
             </ul>
           </li>
           @else
+          
           
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

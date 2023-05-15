@@ -11,15 +11,17 @@
     @endif
 
     @if(session('consoleUpdated'))
-    <div class="aler alert-success">
+    <div class="alert alert-success">
         {{session('consoleUpdated')}}
     </div>
     @endif
+
     @if(session('consoleDeleted'))
-    <div class="aler alert-success">
+    <div class="alert alert-success">
         {{ session('consoleDeleted') }}
     </div>
     @endif
+    
     <div class="container">
         <div class="row">
             @if(count($consoles)>0)

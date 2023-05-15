@@ -21,4 +21,7 @@ class Console extends Model
         // l'oggetto di classe console fa parte di user
         return $this->belongsTo(User::class);
     }
+    public function games(){
+        return $this->belogsToMany(Game::class);
+    }
 }

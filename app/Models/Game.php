@@ -15,4 +15,7 @@ class Game extends Model
         'description',
         'cover'
     ];
+    public function consoles(){
+        return $this->belongsToMany(Console::class);
+    }
 }

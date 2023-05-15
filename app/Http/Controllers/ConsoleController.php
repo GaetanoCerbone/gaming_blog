@@ -81,7 +81,7 @@ class ConsoleController extends Controller
         }
         
 
-        return redirect(route('console.index'))->with('consoleUpdated, Hai aggiornato la tua console con successo');
+        return redirect(route('console.index'))->with('consoleUpdated', 'Hai aggiornato la tua console con successo');
     }
 
     /**
@@ -90,6 +90,6 @@ class ConsoleController extends Controller
     public function destroy(Console $console)
     {
         $console->delete();
-        return redirect(route('console.index'))->with('consoleDeleted, Hai cancellato la tua console con successo');
+        return redirect(route('console.index'))->with('consoleDeleted', 'Hai cancellato la tua console con successo');
     }
 }
