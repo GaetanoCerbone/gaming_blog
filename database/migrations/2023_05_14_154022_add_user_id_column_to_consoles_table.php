@@ -12,7 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('consoles', function (Blueprint $table) {
-            //
+            //NUMERO INTERO SENZA SEGNO
+            $table->unsignedBigInteger('user_id')->after('id')->nullable();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -22,7 +25,10 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('consoles', function (Blueprint $table) {
-            //
+            // $table->dropForeign('consoles_user_id_foreign');
+            // convenzione laravel
+            $table->dropForeign(['user_id']);
+            $table->dropColumn('user_id');
         });
     }
 };
