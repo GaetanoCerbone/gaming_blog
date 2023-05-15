@@ -8,6 +8,9 @@
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           @auth
           <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{route('user.profile')}}">Profilo</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('game.create')}}">Carica un gioco</a>
           </li>
           @endauth
